@@ -1,0 +1,35 @@
+================================================================================
+=== ENTITY RESOLUTION VALIDATION: BEFORE FIX 1 (Buggy Predicate) ===
+================================================================================
+Blended Precision: 100.00% | Recall: 18.75% | F1: 31.58%
+TP=3, FP=0, FN=13
+Root Cause: Required analyst approval clicks for score >= 0.72 candidates to count as positive.
+
+================================================================================
+=== ENTITY RESOLUTION VALIDATION: AFTER FIX 1 (3-Tier Disaggregated Blocks) ===
+================================================================================
+
+[1] ALGORITHMIC PREDICTIONS (Threshold >= 0.72):
+  Precision: 100.00%
+  Recall:    100.00%
+  F1 Score:  100.00%
+  TP: 16 | FP: 0 | FN: 0
+  Threshold: 0.72
+  Notes:     Measures the resolver's raw similarity-threshold predictions (score >= review threshold), independent of analyst review status.
+
+[2] AUTO-MERGE ONLY (Threshold >= 0.92):
+  Precision: 100.00%
+  Recall:    18.75%
+  F1 Score:  31.58%
+  TP: 3 | FP: 0 | FN: 13
+  Threshold: 0.92
+  Notes:     Measures only pairs the system auto-merged without human review (stricter, higher-confidence subset).
+
+[3] ANALYST-APPROVED MERGES (Human Workflow):
+  Precision: 0.00%
+  Recall:    0.00%
+  F1 Score:  0.00%
+  TP: 0 | FP: 0 | FN: 16
+  Notes:     Measures the rate of manually-approved merges — reflects analyst workflow usage, not algorithm quality. Will be 0 or low until an analyst has reviewed candidates in the Analyst Review screen.
+
+Total Evaluated Pairs: 20

@@ -1,0 +1,229 @@
+<USER_REQUEST>
+ANTIGRAVITY — FINAL NEURONEX SIH26189 IMPLEMENTATION & QA PASS
+
+CONTEXT: NeuroNex's core pipeline (ingestion, NER, entity resolution, knowledge graph,
+centrality/PageRank, 5 suspicious-pattern detectors, communities, Case/Document/Community
+Detail views, edge evidence panel, health check, NER+entity-resolution validation) is
+verified functional in the current codebase. This is a targeted fix pass for 5 confirmed
+issues plus 3 PPT corrections. Do NOT rebuild, do NOT remove working functionality, do NOT
+add authentication/RBAC/GNN/transformer models — none of that is in scope.
+
+============================================================
+FIX 1 (P0): Case Detail — community/insight counts are unreliable/fabricated
+============================================================
+FILE: backend/app/routers/documents.py, function get_case_detail()
+
+ROOT CAUSE (verified by reading the code): community count is computed via
+`if case.case_code in str(m) for m in c_comm.get("members", [])` — comparing a case
+code string against SHA-hash canonical entity IDs, which essentially never matches.
+When this returns 0, the code falls back to a FABRICATED number:
+`comm_count = min(len(comms["communities"]), max(1, len(doc_ids) // 2))` — this has no
+relationship to which communities actually touch this case and must be removed
+entirely. Insight count uses `Insight.explanation.ilike(f"%{case.case_code}%")`, a
+fragile substring match on generated prose that won't reliably match most insight types.
+
+FIX — community count:
+1. Get this case's document IDs (already computed as `doc_ids`).
+2. Query ExtractedEntity WHERE document_id IN doc_ids to get this case's
+   canonical_entity_id set (the entity's canonical Neo4j ID, already stored per FIX A
+   from a prior round — confirm the column name, likely `canonical_entity_id` on
+   ExtractedEntity; if it's stored elsewhere e.g. via a join table, use that).
+3. Call get_communities() as today, but count a community as "touching this case" if
+   ANY of its `members` (canonical IDs) intersects this case's canonical entity ID set
+   — a real set-intersection check, not a string-in-string check.
+4. DELETE the fabricated fallback block entirely (`if comm_count == 0 and ...`). If the
+   real intersection count is 0, return 0 — that's an honest answer.
+
+FIX — insight count:
+1. Insight.source_refs is a JSON list of document_ids (confirmed in models_sql.py) —
+   use this instead of substring-matching explanation text.
+2. Query: fetch all Insight rows, filter in Python (or via a JSON containment query if
+   your DB dialect supports it) for rows where `set(insight.source_refs) & set(doc_ids)`
+   is non-empty. Count those.
+3. This is more reliable than ilike() and doesn't depend on explanation wording.
+
+Apply the same corrected logic to the Case Detail frontend tabs (Communities, Insights)
+in frontend/src/pages/CaseDetail.jsx if they independently re-filter data client-side —
+audit that file and make sure it displays exactly what these corrected backend counts
+say, with no separate client-side guess logic.
+
+VERIFY: create 2 test cases with distinct entities/documents. Confirm Case A's detail
+view shows 0 communities/insights belonging only to Case B, and vice versa (this was
+the original Red Flag 1 acceptance test — it must now genuinely pass, not just avoid
+crashing).
+
+============================================================
+FIX 2 (P1): Financial relationship semantics
+============================================================
+FILE: backend/app/pipeline/kg_builder.py, function _build_financial_edges()
+
+Change the relationship type from "ASSOCIATED_WITH" to "TRANSFERRED_TO":
+    await upsert_edge(
+        src_cid, dst_cid, "TRANSFERRED_TO", "financial", doc_id,
+        weight=amount, evidence_snippet=evidence, confidence=0.90, case_ref=case_ref,
+    )
+The evidence_snippet, weight (amount), and case_ref properties are already correctly
+captured — no other changes needed to this function.
+
+MODIFY: backend/app/pipeline/explainability.py — wherever edge/relationship
+explanations are generated, add specific phrasing for TRANSFERRED_TO edges:
+    f"Account {src_name} transferred ₹{amount:,} to account {dst_name} on
+    {timestamp}. Financial relationship identified — requires analyst review."
+Never say "laundering," "illicit," or imply criminality from the transfer alone.
+
+MODIFY: frontend/src/components/RelationshipDetailPanel.jsx — confirm it renders
+TRANSFERRED_TO edges with a distinct, readable label (e.g. "💰 Transferred To") rather
+than falling back to a generic "Associated With" display; check if there's a
+relationship-type-to-label mapping object and add TRANSFERRED_TO to it if missing.
+
+MIGRATION: existing demo data in Neo4j may have ASSOCIATED_WITH edges from financial
+records created before this fix. Add a one-time migration Cypher query, run automatically
+on next backend startup (in main.py's startup event, guarded so it only runs once —
+check for a marker or just make it idempotent since MATCH+SET is safe to re-run):
+    MATCH (a:Account)-[r:ASSOCIATED_WITH]->(b:Account)
+    WHERE r.source_types IS NOT NULL AND "financial" IN r.source_types
+    SET r.migrated_from = "ASSOCIATED_WITH"
+    // then create a new TRANSFERRED_TO edge with the same properties and delete old:
+    // (implement via CREATE + copy properties + DELETE r, or via apoc if available;
+    // if apoc isn't available, do this in Python by reading matching edges via
+    // run_query, then upsert_edge with type TRANSFERRED_TO for each, then a DETACH
+    // DELETE style removal of just that relationship — do not delete the nodes)
+Also update generate_synthetic_data.py / admin.py's seeding path is unaffected since
+future seeds will use the corrected function — just handle the migration for existing
+demo data as described.
+
+============================================================
+FIX 3 (P1): High-frequency communication detector — small-sample robustness
+============================================================
+FILE: backend/app/pipeline/patterns.py, function detect_high_frequency_communication()
+
+Replace the unconditional 95th-percentile logic with sample-size-aware logic:
+    n = len(weights)
+    if n < 10:
+        # Too few observations for a meaningful percentile — use an honest minimum-
+        # threshold approach instead: flag only pairs with weight >= 3x the dataset
+        # mean AND weight >= 5 (an absolute floor so single high-weight edges in a
+        # near-empty dataset aren't over-flagged).
+        mean_w = sum(weights) / n if n else 0
+        threshold = max(5, round(mean_w * 3))
+        basis = f"absolute-threshold (dataset too small for percentile analysis, n={n})"
+    else:
+        weights_sorted = sorted(weights)
+        cutoff_idx = max(0, int(n * 0.95) - 1)
+        threshold = weights_sorted[cutoff_idx]
+        basis = f"95th-percentile (n={n} communication edges)"
+
+For every flagged pattern, add these fields to the returned dict:
+    "sample_size": n,
+    "threshold_used": threshold,
+    "comparison_basis": basis,
+And change the description template to explicitly state the basis, e.g.:
+    f"Communication frequency ({w} contacts) is unusually high relative to the "
+    f"{n} communication records available in this dataset ({basis}). "
+    f"Potential anomaly, requires analyst review."
+Never say "highly suspicious" or imply the result is statistically robust when n < 10 —
+the description must make the small-sample caveat visible to the reader, not just log it.
+
+MODIFY: frontend/src/pages/Insights.jsx and any pattern-detail rendering — display
+sample_size and comparison_basis alongside the pattern description so an analyst can see
+the statistical basis, not just the conclusion.
+
+============================================================
+FIX 4: No action required (verified already correct)
+============================================================
+_validate_pattern_detection() in validation.py already correctly returns
+"detector_coverage" (not "accuracy"), and Validation.jsx already renders this as
+"Coverage" — confirmed by direct inspection. NER validation already runs real
+precision/recall/F1 against ner_ground_truth.csv. No changes needed here — do not
+touch this file except as a side effect of Fix 3 if pattern output shape changes (in
+which case, confirm _validate_pattern_detection still runs cleanly against the updated
+detect_high_frequency_communication return shape).
+
+============================================================
+FIX 5 (P1): PPT technical accuracy corrections
+============================================================
+FILE: the SIH presentation (sih2026_189_5.pptx) — make these text corrections on Slide 3
+("TECHNOLOGY STACK" / "AI / NLP" section):
+
+1. Change "spaCy / transformer-based NER" to "spaCy pre-trained NER (architecture
+   supports future transformer-based NER upgrade)" — the codebase only implements
+   spaCy; no transformer model exists anywhere. Do not claim a capability that isn't
+   built; note it as an architectural extension point instead, which is both true and
+   still a credible technical point.
+2. Change "PostgreSQL" (under "Data & Graph") to "SQLite (prototype) — PostgreSQL-
+   ready via configurable connection string" — the running system uses SQLite; do not
+   claim a database that isn't actually deployed/tested.
+3. Remove "Role-based access control" from the "Infrastructure" bullet list — no RBAC
+   or authentication exists anywhere in the codebase. If access control is a planned
+   capability, move it to a "Future Work" note instead, do not list it as a current
+   Infrastructure feature.
+4. On the "END-TO-END WORKFLOW" diagram (same slide), add two boxes that are currently
+   missing despite being genuinely implemented and directly required by the SIH brief:
+   "Influential Entity Detection" and "Suspicious Pattern Detection", positioned
+   between "Graph Analytics + Community Detection" and "Explainable Insights". These
+   are real, working, SIH-required capabilities (PageRank/betweenness/eigenvector
+   PERSON-only ranking; 5 rule-based pattern detectors) that the current diagram
+   undersells — this is a presentation strengthening, not a correction of an overclaim.
+
+If you can programmatically edit the .pptx (e.g. via python-pptx), make these 4 text
+edits directly. If the PPT is provided as a design file you cannot reliably edit
+programmatically, produce a clearly labeled list of the exact before/after text changes
+instead, so the user can make them manually in PowerPoint.
+
+============================================================
+TESTING (mandatory — do not report PASS without executing)
+============================================================
+Run each of the following and report the actual result. If something cannot be executed
+in your environment, report "NOT EXECUTED — ENVIRONMENT LIMITATION" rather than assuming
+it passed.
+
+1. Python compile check: `python -m py_compile` on every backend .py file — must be
+   clean.
+2. Run any existing backend test suite (backend/tests/ — confirmed present in this
+   codebase) and report pass/fail per test.
+3. docker compose up --build on a clean volume; confirm GET /health reports backend,
+   neo4j, and database all "ok".
+4. Reset Data, then Load Demo Data — confirm success with no 500s.
+5. Open Case A and Case B (two different seeded demo cases). Confirm Case A's
+   Communities and Insights tabs show ONLY items genuinely traceable to Case A's
+   entities/documents — cross-check by manually inspecting at least one community and
+   one insight shown to confirm it actually references Case A data, not Case B's.
+6. Confirm a FIR with 3+ accused persons produces 3+ separate MENTIONED_IN edges (prior
+   fix regression check).
+7. Confirm the Overview "Relationships" count is a real edge count, not a person count
+   (prior fix regression check).
+8. Query the graph for at least one financial-source edge; confirm its type is now
+   TRANSFERRED_TO, not ASSOCIATED_WITH, and confirm the migration correctly converted
+   any pre-existing ASSOCIATED_WITH financial edges from the demo dataset.
+9. Trigger detect_high_frequency_communication on the demo dataset (small sample);
+   confirm returned patterns include sample_size, threshold_used, and comparison_basis
+   fields, and confirm the description text visibly states the small-sample caveat if
+   n < 10.
+10. Confirm PERSON-only key-influencer endpoint still returns only PERSON entities with
+    explanations naming the specific metric(s) that triggered inclusion.
+11. Confirm all 5 pattern detectors still return results (or empty lists, gracefully)
+    without errors.
+12. Click through Overview navigation, Case Detail, Document Detail, Community Detail,
+    Knowledge Graph search + edge-click evidence panel — confirm all remain functional
+    (regression check on prior fixes).
+13. Run Validation → "Run All Tests" — confirm entity resolution shows real P/R/F1, NER
+    shows real P/R/F1 against ner_ground_truth.csv, and pattern detection shows
+    "Coverage" language, never "accuracy", with no fabricated numbers anywhere.
+14. Grep the entire codebase (frontend + backend) for "GNN", "PyTorch Geometric",
+    "BERT", "transformer", "AUC", "risk score", "deep learning", "trained model" —
+    report every match and confirm none of them describe unimplemented functionality
+    as if it were real.
+15. Confirm the PPT edits from Fix 5 were applied (or report the manual-edit list if
+    direct editing wasn't possible).
+16. Full end-to-end regression: Reset → Load Demo Data → open a case → view its graph
+    → click a financial edge (confirm TRANSFERRED_TO + evidence) → view Key Influential
+    Individuals → view Insights (confirm a high-frequency-communication pattern shows
+    its sample size/basis if present) → Analyst Review → Validation. Confirm nothing
+    that worked before this pass is now broken.
+
+Report each of the 16 items individually with PASS / FAIL / NOT EXECUTED, not a single
+summary "all good."
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-04T02:52:14+05:30.
+</ADDITIONAL_METADATA>

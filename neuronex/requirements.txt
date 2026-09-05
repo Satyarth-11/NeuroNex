@@ -1,0 +1,5 @@
+# NeuroNex — AI-Powered Criminal Network Analysis System
+# Root Python Requirements File for GitHub Repository
+
+-r backend/requirements.txt
+

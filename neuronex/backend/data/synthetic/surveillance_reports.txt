@@ -1,0 +1,251 @@
+--- REPORT
+REPORT_ID: SURV-2024-MH-001
+CASE_REF: CASE-2024-001
+TEAM: Mumbai Mobile Surveillance Unit
+LOCATION: Andheri West, Mumbai
+DATE: 2024-03-14
+
+Subjects Raju (believed to be Rajesh Kumar Sharma) and Priya M were observed
+meeting at a café in Andheri West, Mumbai at approximately 11:30 hrs.
+Both arrived in vehicle MH01AB1234. A third individual, identified tentatively
+as Anil Verma, joined them at 12:00 hrs. A document exchange was observed.
+No unlawful activity directly witnessed. Vehicle KA03EF9012 was seen parked
+nearby and departed at 12:30 hrs.
+
+--- REPORT
+REPORT_ID: SURV-2024-DL-002
+CASE_REF: CASE-2024-002
+TEAM: New Delhi Surveillance Team B
+LOCATION: Karol Bagh, New Delhi
+DATE: 2024-04-01
+
+D. Patel (believed to be Dinesh Patel) and Sameer Joshi were observed loading
+boxes into vehicle TN09GH3456 at a warehouse in Karol Bagh, New Delhi.
+Phoenix Traders Association signage was visible on the warehouse exterior.
+Vikram Singh arrived at 15:00 hrs in vehicle MH02IJ7890 and exchanged an
+envelope with D. Patel. Both departed separately.
+
+--- REPORT
+REPORT_ID: SURV-2024-KA-003
+CASE_REF: CASE-2024-003
+TEAM: Bengaluru Field Unit
+LOCATION: Koramangala, Bengaluru
+DATE: 2024-05-19
+
+Mohammed Farooq and Sunita Desai were observed at an office building in
+Koramangala, Bengaluru. They met with an unidentified individual for
+approximately 45 minutes. Farooq was seen receiving a package.
+Vehicle KA03EF9012 parked outside throughout the meeting.
+Geeta Bose arrived at 14:00 hrs and joined the meeting briefly.
+
+--- REPORT
+REPORT_ID: SURV-2024-WB-004
+CASE_REF: CASE-2024-004
+TEAM: Kolkata Observation Post 7
+LOCATION: Salt Lake, Kolkata
+DATE: 2024-06-09
+
+Fatima Sheikh and Arjun Malhotra were observed at a hotel lobby in Salt Lake,
+Kolkata. Leela K (believed to be Leela Krishnamurthy) was seen passing a
+document to Fatima Sheikh. Nandita Roy arrived at 16:30 hrs.
+ShadowTech Pvt Ltd branding was visible on a laptop screen during the meeting.
+All subjects departed by 17:30 hrs.
+
+--- REPORT SURV-2024-EXP-0100 ---
+CASE_REF: CASE-2024-011
+LOCATION: Connaught Place, New Delhi
+DATE: 2024-07-01
+OFFICER_ID: SURV_OFFICER_01
+NOTES: Physical surveillance confirmed operative Kavita Nair (alias Kavita N) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0102 ---
+CASE_REF: CASE-2024-013
+LOCATION: Rohini, New Delhi
+DATE: 2024-07-03
+OFFICER_ID: SURV_OFFICER_03
+NOTES: Physical surveillance confirmed operative Leela Krishnamurthy (alias Leela K) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0104 ---
+CASE_REF: CASE-2024-015
+LOCATION: Powai, Mumbai
+DATE: 2024-07-05
+OFFICER_ID: SURV_OFFICER_05
+NOTES: Physical surveillance confirmed operative Nandita Roy (alias Nandita) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0106 ---
+CASE_REF: CASE-2024-017
+LOCATION: Koramangala, Bengaluru
+DATE: 2024-07-07
+OFFICER_ID: SURV_OFFICER_07
+NOTES: Physical surveillance confirmed operative Geeta Bose (alias G. Bose) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0108 ---
+CASE_REF: CASE-2024-019
+LOCATION: Indiranagar, Bengaluru
+DATE: 2024-07-09
+OFFICER_ID: SURV_OFFICER_09
+NOTES: Physical surveillance confirmed operative Fatima Sheikh (alias Fatima S) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0110 ---
+CASE_REF: CASE-2024-021
+LOCATION: Park Street, Kolkata
+DATE: 2024-07-11
+OFFICER_ID: SURV_OFFICER_01
+NOTES: Physical surveillance confirmed operative Anand Banerjee (alias A. Banerjee) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0112 ---
+CASE_REF: CASE-2024-023
+LOCATION: T Nagar, Chennai
+DATE: 2024-07-13
+OFFICER_ID: SURV_OFFICER_03
+NOTES: Physical surveillance confirmed operative Geeta Kaur (alias G. Kaur) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0114 ---
+CASE_REF: CASE-2024-025
+LOCATION: Guindy, Chennai
+DATE: 2024-07-15
+OFFICER_ID: SURV_OFFICER_05
+NOTES: Physical surveillance confirmed operative Deepak Prasad (alias D. Prasad) meeting with commercial contacts. Vehicle TS02AB4733 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0116 ---
+CASE_REF: CASE-2024-027
+LOCATION: Hitec City, Hyderabad
+DATE: 2024-07-17
+OFFICER_ID: SURV_OFFICER_07
+NOTES: Physical surveillance confirmed operative Sandeep Goel (alias Sandeep G) meeting with commercial contacts. Vehicle TN12GH3677 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0118 ---
+CASE_REF: CASE-2024-029
+LOCATION: Navrangpura, Ahmedabad
+DATE: 2024-07-19
+OFFICER_ID: SURV_OFFICER_09
+NOTES: Physical surveillance confirmed operative Rakesh Varma (alias Rakesh V) meeting with commercial contacts. Vehicle WB05CD4456 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0120 ---
+CASE_REF: CASE-2024-031
+LOCATION: Shivajinagar, Pune
+DATE: 2024-07-21
+OFFICER_ID: SURV_OFFICER_01
+NOTES: Physical surveillance confirmed operative Jagdish Iyer (alias Jagdish I) meeting with commercial contacts. Vehicle TN07MN4593 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0122 ---
+CASE_REF: CASE-2024-033
+LOCATION: Aliganj, Lucknow
+DATE: 2024-07-23
+OFFICER_ID: SURV_OFFICER_03
+NOTES: Physical surveillance confirmed operative Karan Verma (alias Karan V) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0124 ---
+CASE_REF: CASE-2024-035
+LOCATION: Civil Lines, Jaipur
+DATE: 2024-07-25
+OFFICER_ID: SURV_OFFICER_05
+NOTES: Physical surveillance confirmed operative Girish Jha (alias G. Jha) meeting with commercial contacts. Vehicle GJ03CD5889 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0126 ---
+CASE_REF: CASE-2024-037
+LOCATION: Connaught Place, New Delhi
+DATE: 2024-07-02
+OFFICER_ID: SURV_OFFICER_07
+NOTES: Physical surveillance confirmed operative Priya Banerjee (alias P. Banerjee) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0128 ---
+CASE_REF: CASE-2024-039
+LOCATION: Rohini, New Delhi
+DATE: 2024-07-04
+OFFICER_ID: SURV_OFFICER_09
+NOTES: Physical surveillance confirmed operative Pooja Prasad (alias P. Prasad) meeting with commercial contacts. Vehicle DL15GH6107 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0130 ---
+CASE_REF: CASE-2024-041
+LOCATION: Powai, Mumbai
+DATE: 2024-07-06
+OFFICER_ID: SURV_OFFICER_01
+NOTES: Physical surveillance confirmed operative Akash Rathore (alias Akash R) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0132 ---
+CASE_REF: CASE-2024-043
+LOCATION: Koramangala, Bengaluru
+DATE: 2024-07-08
+OFFICER_ID: SURV_OFFICER_03
+NOTES: Physical surveillance confirmed operative Nitin Jain (alias Nitin J) meeting with commercial contacts. Vehicle TN10RS4981 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0134 ---
+CASE_REF: CASE-2024-045
+LOCATION: Indiranagar, Bengaluru
+DATE: 2024-07-10
+OFFICER_ID: SURV_OFFICER_05
+NOTES: Physical surveillance confirmed operative Dinesh Bhatt (alias D. Bhatt) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0136 ---
+CASE_REF: CASE-2024-047
+LOCATION: Park Street, Kolkata
+DATE: 2024-07-12
+OFFICER_ID: SURV_OFFICER_07
+NOTES: Physical surveillance confirmed operative Chetan Mittal (alias Chetan M) meeting with commercial contacts. Vehicle TN14AB2528 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0138 ---
+CASE_REF: CASE-2024-049
+LOCATION: T Nagar, Chennai
+DATE: 2024-07-14
+OFFICER_ID: SURV_OFFICER_09
+NOTES: Physical surveillance confirmed operative Sharad Jadhav (alias Sharad J) meeting with commercial contacts. Vehicle TS13RS3536 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0140 ---
+CASE_REF: CASE-2024-051
+LOCATION: Guindy, Chennai
+DATE: 2024-07-16
+OFFICER_ID: SURV_OFFICER_01
+NOTES: Physical surveillance confirmed operative Pratibha Patel (alias Pratibha P) meeting with commercial contacts. Vehicle MH14EF2122 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0142 ---
+CASE_REF: CASE-2024-053
+LOCATION: Hitec City, Hyderabad
+DATE: 2024-07-18
+OFFICER_ID: SURV_OFFICER_03
+NOTES: Physical surveillance confirmed operative Anil Roy (alias A. Roy) meeting with commercial contacts. Vehicle KA04MN4910 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0144 ---
+CASE_REF: CASE-2024-055
+LOCATION: Navrangpura, Ahmedabad
+DATE: 2024-07-20
+OFFICER_ID: SURV_OFFICER_05
+NOTES: Physical surveillance confirmed operative Chetan Agarwal (alias C. Agarwal) meeting with commercial contacts. Vehicle MH01AB1234 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0146 ---
+CASE_REF: CASE-2024-057
+LOCATION: Shivajinagar, Pune
+DATE: 2024-07-22
+OFFICER_ID: SURV_OFFICER_07
+NOTES: Physical surveillance confirmed operative Shobha Singh (alias S. Singh) meeting with commercial contacts. Vehicle TN05CD3200 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.
+
+
+--- REPORT SURV-2024-EXP-0148 ---
+CASE_REF: CASE-2024-059
+LOCATION: Aliganj, Lucknow
+DATE: 2024-07-24
+OFFICER_ID: SURV_OFFICER_09
+NOTES: Physical surveillance confirmed operative Mukesh Singh (alias M. Singh) meeting with commercial contacts. Vehicle KA15AB2512 was observed parked near commercial registry. Subject departed toward highway ring road at 16:30 hours.

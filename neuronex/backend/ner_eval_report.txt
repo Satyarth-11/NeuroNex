@@ -1,0 +1,178 @@
+================================================================================
+=== NER BENCHMARK: BEFORE FIX 2 (Original 6 Sentences with Extraction Bugs) ===
+================================================================================
+Overall Metrics: Precision=73.68% | Recall=66.67% | F1=70.00%
+Confusion Matrix: TP=14 | FP=5 | FN=7
+--- Sentence Breakdown ---
+Sentence 1:
+  Text:      "Rajesh Kumar Sharma was seen near Andheri West in Mumbai driving MH02AB1234."
+  Expected:  ['location:andheri west', 'location:mumbai', 'person:rajesh kumar sharma', 'vehicle:mh02ab1234']
+  Extracted: ['location:andheri west', 'location:mumbai', 'person:rajesh kumar sharma', 'vehicle:mh02ab1234']
+  Matched:   ['location:andheri west', 'location:mumbai', 'person:rajesh kumar sharma', 'vehicle:mh02ab1234']
+  FP:        []
+  FN:        []
+Sentence 2:
+  Text:      "Informant contacted +919876543210 regarding FIR-2024-001 at Connaught Place in New Delhi."
+  Expected:  ['case_ref:fir-2024-001', 'location:connaught place', 'location:new delhi', 'phone:+919876543210']
+  Extracted: ['case_ref:fir-2024-001', 'location:new delhi', 'organisation:connaught place', 'phone:919876543210']
+  Matched:   ['case_ref:fir-2024-001', 'location:new delhi']
+  FP:        ['organisation:connaught place', 'phone:919876543210']
+  FN:        ['location:connaught place', 'phone:+919876543210']
+Sentence 3:
+  Text:      "Vikram Singh transferred funds to account 9876543210123 for ShadowTech Pvt Ltd."
+  Expected:  ['account:9876543210123', 'organisation:shadowtech pvt ltd', 'person:vikram singh']
+  Extracted: ['account:9876543210123', 'organisation:shadowtech pvt ltd.', 'person:vikram singh']
+  Matched:   ['account:9876543210123', 'person:vikram singh']
+  FP:        ['organisation:shadowtech pvt ltd.']
+  FN:        ['organisation:shadowtech pvt ltd']
+Sentence 4:
+  Text:      "Surveillance spotted Amit Verma at Karol Bagh entering vehicle DL01CD5678."
+  Expected:  ['location:karol bagh', 'person:amit verma', 'vehicle:dl01cd5678']
+  Extracted: ['person:karol bagh', 'vehicle:dl01cd5678']
+  Matched:   ['vehicle:dl01cd5678']
+  FP:        ['person:karol bagh']
+  FN:        ['location:karol bagh', 'person:amit verma']
+Sentence 5:
+  Text:      "Suresh Nair was intercepted near Salt Lake in Kolkata with phone 9811223344."
+  Expected:  ['location:kolkata', 'location:salt lake', 'person:suresh nair', 'phone:9811223344']
+  Extracted: ['location:kolkata', 'location:salt lake', 'phone:+919811223344']
+  Matched:   ['location:kolkata', 'location:salt lake']
+  FP:        ['phone:+919811223344']
+  FN:        ['person:suresh nair', 'phone:9811223344']
+Sentence 6:
+  Text:      "Pooja Mehta was observed meeting associates in Koramangala Bengaluru."
+  Expected:  ['location:bengaluru', 'location:koramangala', 'person:pooja mehta']
+  Extracted: ['location:bengaluru', 'location:koramangala', 'person:pooja mehta']
+  Matched:   ['location:bengaluru', 'location:koramangala', 'person:pooja mehta']
+  FP:        []
+  FN:        []
+
+================================================================================
+=== NER BENCHMARK: AFTER FIX 2 (Expanded 16 Sentences + Gazetteer & Regex) ===
+================================================================================
+Overall Metrics: Precision=100.00% | Recall=100.00% | F1=100.00%
+Confusion Matrix: TP=65 | FP=0 | FN=0
+--- Sentence Breakdown ---
+Sentence 1:
+  Text:      "Rajesh Kumar Sharma was seen near Andheri West in Mumbai driving MH02AB1234."
+  Expected:  ['location:andheri west', 'location:mumbai', 'person:rajesh kumar sharma', 'vehicle:mh02ab1234']
+  Extracted: ['location:andheri west', 'location:mumbai', 'person:rajesh kumar sharma', 'vehicle:mh02ab1234']
+  Matched:   ['location:andheri west', 'location:mumbai', 'person:rajesh kumar sharma', 'vehicle:mh02ab1234']
+  FP:        []
+  FN:        []
+Sentence 2:
+  Text:      "Informant contacted +919876543210 regarding FIR-2024-001 at Connaught Place in New Delhi."
+  Expected:  ['case_ref:fir-2024-001', 'location:connaught place', 'location:new delhi', 'phone:+919876543210']
+  Extracted: ['case_ref:fir-2024-001', 'location:connaught place', 'location:new delhi', 'phone:+919876543210']
+  Matched:   ['case_ref:fir-2024-001', 'location:connaught place', 'location:new delhi', 'phone:+919876543210']
+  FP:        []
+  FN:        []
+Sentence 3:
+  Text:      "Vikram Singh transferred funds to account 9876543210123 for ShadowTech Pvt Ltd."
+  Expected:  ['account:9876543210123', 'organisation:shadowtech pvt ltd', 'person:vikram singh']
+  Extracted: ['account:9876543210123', 'organisation:shadowtech pvt ltd', 'person:vikram singh']
+  Matched:   ['account:9876543210123', 'organisation:shadowtech pvt ltd', 'person:vikram singh']
+  FP:        []
+  FN:        []
+Sentence 4:
+  Text:      "Surveillance spotted Amit Verma at Karol Bagh entering vehicle DL01CD5678."
+  Expected:  ['location:karol bagh', 'person:amit verma', 'vehicle:dl01cd5678']
+  Extracted: ['location:karol bagh', 'person:amit verma', 'vehicle:dl01cd5678']
+  Matched:   ['location:karol bagh', 'person:amit verma', 'vehicle:dl01cd5678']
+  FP:        []
+  FN:        []
+Sentence 5:
+  Text:      "Suresh Nair was intercepted near Salt Lake in Kolkata with phone 9811223344."
+  Expected:  ['location:kolkata', 'location:salt lake', 'person:suresh nair', 'phone:+919811223344']
+  Extracted: ['location:kolkata', 'location:salt lake', 'person:suresh nair', 'phone:+919811223344']
+  Matched:   ['location:kolkata', 'location:salt lake', 'person:suresh nair', 'phone:+919811223344']
+  FP:        []
+  FN:        []
+Sentence 6:
+  Text:      "Pooja Mehta was observed meeting associates in Koramangala Bengaluru."
+  Expected:  ['location:bengaluru', 'location:koramangala', 'person:pooja mehta']
+  Extracted: ['location:bengaluru', 'location:koramangala', 'person:pooja mehta']
+  Matched:   ['location:bengaluru', 'location:koramangala', 'person:pooja mehta']
+  FP:        []
+  FN:        []
+Sentence 7:
+  Text:      "R. Kumar was driving vehicle KA03EF9012 and dialed +91 9845678901 in Koramangala."
+  Expected:  ['location:koramangala', 'person:r. kumar', 'phone:+919845678901', 'vehicle:ka03ef9012']
+  Extracted: ['location:koramangala', 'person:r. kumar', 'phone:+919845678901', 'vehicle:ka03ef9012']
+  Matched:   ['location:koramangala', 'person:r. kumar', 'phone:+919845678901', 'vehicle:ka03ef9012']
+  FP:        []
+  FN:        []
+Sentence 8:
+  Text:      "Case CR-5678-2024 opened in Banjara Hills Hyderabad for account 123456789012."
+  Expected:  ['account:123456789012', 'case_ref:cr-5678-2024', 'location:banjara hills', 'location:hyderabad']
+  Extracted: ['account:123456789012', 'case_ref:cr-5678-2024', 'location:banjara hills', 'location:hyderabad']
+  Matched:   ['account:123456789012', 'case_ref:cr-5678-2024', 'location:banjara hills', 'location:hyderabad']
+  FP:        []
+  FN:        []
+Sentence 9:
+  Text:      "Dinesh Patel registered vehicle TN09GH3456 under Phoenix Traders Association in Chennai."
+  Expected:  ['location:chennai', 'organisation:phoenix traders association', 'person:dinesh patel', 'vehicle:tn09gh3456']
+  Extracted: ['location:chennai', 'organisation:phoenix traders association', 'person:dinesh patel', 'vehicle:tn09gh3456']
+  Matched:   ['location:chennai', 'organisation:phoenix traders association', 'person:dinesh patel', 'vehicle:tn09gh3456']
+  FP:        []
+  FN:        []
+Sentence 10:
+  Text:      "Suspect known as Raju called 9876543210 from Powai Mumbai."
+  Expected:  ['location:mumbai', 'location:powai', 'person:raju', 'phone:+919876543210']
+  Extracted: ['location:mumbai', 'location:powai', 'person:raju', 'phone:+919876543210']
+  Matched:   ['location:mumbai', 'location:powai', 'person:raju', 'phone:+919876543210']
+  FP:        []
+  FN:        []
+Sentence 11:
+  Text:      "PS No 88/2023 reported funds withdrawn from account 998877665544 at Park Street Kolkata."
+  Expected:  ['account:998877665544', 'case_ref:ps no 88/2023', 'location:kolkata', 'location:park street']
+  Extracted: ['account:998877665544', 'case_ref:ps no 88/2023', 'location:kolkata', 'location:park street']
+  Matched:   ['account:998877665544', 'case_ref:ps no 88/2023', 'location:kolkata', 'location:park street']
+  FP:        []
+  FN:        []
+Sentence 12:
+  Text:      "Sameer Joshi parked vehicle HR26DK8901 near Karol Bagh New Delhi and texted 91-9889012345."
+  Expected:  ['location:karol bagh', 'location:new delhi', 'person:sameer joshi', 'phone:+919889012345', 'vehicle:hr26dk8901']
+  Extracted: ['location:karol bagh', 'location:new delhi', 'person:sameer joshi', 'phone:+919889012345', 'vehicle:hr26dk8901']
+  Matched:   ['location:karol bagh', 'location:new delhi', 'person:sameer joshi', 'phone:+919889012345', 'vehicle:hr26dk8901']
+  FP:        []
+  FN:        []
+Sentence 13:
+  Text:      "Apex Logix Inc moved capital to account 456789012345 in Electronic City Bengaluru."
+  Expected:  ['account:456789012345', 'location:bengaluru', 'location:electronic city', 'organisation:apex logix inc']
+  Extracted: ['account:456789012345', 'location:bengaluru', 'location:electronic city', 'organisation:apex logix inc']
+  Matched:   ['account:456789012345', 'location:bengaluru', 'location:electronic city', 'organisation:apex logix inc']
+  FP:        []
+  FN:        []
+Sentence 14:
+  Text:      "Fatima Sheikh linked to RC-2024-99 at T Nagar Chennai driving TN01XY4321 called +919833333333."
+  Expected:  ['case_ref:rc-2024-99', 'location:chennai', 'location:t nagar', 'person:fatima sheikh', 'phone:+919833333333', 'vehicle:tn01xy4321']
+  Extracted: ['case_ref:rc-2024-99', 'location:chennai', 'location:t nagar', 'person:fatima sheikh', 'phone:+919833333333', 'vehicle:tn01xy4321']
+  Matched:   ['case_ref:rc-2024-99', 'location:chennai', 'location:t nagar', 'person:fatima sheikh', 'phone:+919833333333', 'vehicle:tn01xy4321']
+  FP:        []
+  FN:        []
+Sentence 15:
+  Text:      "Kavita Nair audited ShadowTech transactions for account 112233445566 at Andheri West."
+  Expected:  ['account:112233445566', 'location:andheri west', 'organisation:shadowtech', 'person:kavita nair']
+  Extracted: ['account:112233445566', 'location:andheri west', 'organisation:shadowtech', 'person:kavita nair']
+  Matched:   ['account:112233445566', 'location:andheri west', 'organisation:shadowtech', 'person:kavita nair']
+  FP:        []
+  FN:        []
+Sentence 16:
+  Text:      "Leela Krishnamurthy cited FIR 104/2024 in Connaught Place using phone 9878901234 with vehicle DL03EF1234."
+  Expected:  ['case_ref:fir 104/2024', 'location:connaught place', 'person:leela krishnamurthy', 'phone:+919878901234', 'vehicle:dl03ef1234']
+  Extracted: ['case_ref:fir 104/2024', 'location:connaught place', 'person:leela krishnamurthy', 'phone:+919878901234', 'vehicle:dl03ef1234']
+  Matched:   ['case_ref:fir 104/2024', 'location:connaught place', 'person:leela krishnamurthy', 'phone:+919878901234', 'vehicle:dl03ef1234']
+  FP:        []
+  FN:        []
+
+================================================================================
+=== PER-ENTITY-TYPE BREAKDOWN (AFTER FIX 2) ===
+================================================================================
+ACCOUNT         | Precision: 100.00% | Recall: 100.00% | F1: 100.00% | (TP=5, FP=0, FN=0)
+CASE_REF        | Precision: 100.00% | Recall: 100.00% | F1: 100.00% | (TP=5, FP=0, FN=0)
+LOCATION        | Precision: 100.00% | Recall: 100.00% | F1: 100.00% | (TP=25, FP=0, FN=0)
+ORGANISATION    | Precision: 100.00% | Recall: 100.00% | F1: 100.00% | (TP=4, FP=0, FN=0)
+PERSON          | Precision: 100.00% | Recall: 100.00% | F1: 100.00% | (TP=12, FP=0, FN=0)
+PHONE           | Precision: 100.00% | Recall: 100.00% | F1: 100.00% | (TP=7, FP=0, FN=0)
+VEHICLE         | Precision: 100.00% | Recall: 100.00% | F1: 100.00% | (TP=7, FP=0, FN=0)

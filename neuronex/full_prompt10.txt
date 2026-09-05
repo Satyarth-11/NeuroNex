@@ -1,0 +1,65 @@
+<USER_REQUEST>
+ANTIGRAVITY â€” FINAL NEURONEX SIH26189 IMPLEMENTATION & QA PASS
+
+CONTEXT: NeuroNex's core pipeline (ingestion, NER, entity resolution, knowledge graph,
+centrality/PageRank, 5 suspicious-pattern detectors, communities, Case/Document/Community
+Detail views, edge evidence panel, health check, NER+entity-resolution validation) is
+verified functional in the current codebase. This is a targeted fix pass for 5 confirmed
+issues plus 3 PPT corrections. Do NOT rebuild, do NOT remove working functionality, do NOT
+add authentication/RBAC/GNN/transformer models â€” none of that is in scope.
+
+============================================================
+FIX 1 (P0): Case Detail â€” community/insight counts are unreliable/fabricated
+============================================================
+FILE: backend/app/routers/documents.py, function get_case_detail()
+
+ROOT CAUSE (verified by reading the code): community count is computed via
+`if case.case_code in str(m) for m in c_comm.get("members", [])` â€” comparing a case
+code string against SHA-hash canonical entity IDs, which essentially never matches.
+When this returns 0, the code falls back to a FABRICATED number:
+`comm_count = min(len(comms["communities"]), max(1, len(doc_ids) // 2))` â€” this has no
+relationship to which communities actually touch this case and must be removed
+entirely. Insight count uses `Insight.explanation.ilike(f"%{case.case_code}%")`, a
+fragile substring match on generated prose that won't reliably match most insight types.
+
+FIX â€” community count:
+1. Get this case's document IDs (already computed as `doc_ids`).
+2. Query ExtractedEntity WHERE document_id IN doc_ids to get this case's
+   canonical_entity_id set (the entity's canonical Neo4j ID, already stored per FIX A
+   from a prior round â€” confirm the column name, likely `canonical_entity_id` on
+   ExtractedEntity; if it's stored elsewhere e.g. via a join table, use that).
+3. Call get_communities() as today, but count a community as "touching this case" if
+
+<truncated 10361 bytes>
+r detect_high_frequency_communication on the demo dataset (small sample);
+   confirm returned patterns include sample_size, threshold_used, and comparison_basis
+   fields, and confirm the description text visibly states the small-sample caveat if
+   n < 10.
+10. Confirm PERSON-only key-influencer endpoint still returns only PERSON entities with
+    explanations naming the specific metric(s) that triggered inclusion.
+11. Confirm all 5 pattern detectors still return results (or empty lists, gracefully)
+    without errors.
+12. Click through Overview navigation, Case Detail, Document Detail, Community Detail,
+    Knowledge Graph search + edge-click evidence panel â€” confirm all remain functional
+    (regression check on prior fixes).
+13. Run Validation â†’ "Run All Tests" â€” confirm entity resolution shows real P/R/F1, NER
+    shows real P/R/F1 against ner_ground_truth.csv, and pattern detection shows
+    "Coverage" language, never "accuracy", with no fabricated numbers anywhere.
+14. Grep the entire codebase (frontend + backend) for "GNN", "PyTorch Geometric",
+    "BERT", "transformer", "AUC", "risk score", "deep learning", "trained model" â€”
+    report every match and confirm none of them describe unimplemented functionality
+    as if it were real.
+15. Confirm the PPT edits from Fix 5 were applied (or report the manual-edit list if
+    direct editing wasn't possible).
+16. Full end-to-end regression: Reset â†’ Load Demo Data â†’ open a case â†’ view its graph
+    â†’ click a financial edge (confirm TRANSFERRED_TO + evidence) â†’ view Key Influential
+    Individuals â†’ view Insights (confirm a high-frequency-communication pattern shows
+    its sample size/basis if present) â†’ Analyst Review â†’ Validation. Confirm nothing
+    that worked before this pass is now broken.
+
+Report each of the 16 items individually with PASS / FAIL / NOT EXECUTED, not a single
+summary "all good."
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-04T02:52:14+05:30.
+</ADDITIONAL_METADATA>

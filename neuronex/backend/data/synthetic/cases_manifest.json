@@ -1,0 +1,52 @@
+[
+  {
+    "case_code": "CASE-2024-001",
+    "title": "[DEMO] ShadowTech Financial Fraud & UPI Diversion",
+    "description": "Multi-jurisdictional inquiry into investment diversion through fake UPI payment channels operated by ShadowTech Pvt Ltd in Andheri West, Mumbai."
+  },
+  {
+    "case_code": "CASE-2024-002",
+    "title": "[DEMO] Phoenix Traders Warehouse Consignment Theft",
+    "description": "Investigation into illegal logistics movement and warehouse stock diversion across Karol Bagh and New Delhi corridors."
+  },
+  {
+    "case_code": "CASE-2024-003",
+    "title": "[DEMO] Koramangala Commercial Contract Fraud",
+    "description": "Advance payment diversion scheme involving fabricated service contracts and unauthorized vehicle transport in Bengaluru."
+  },
+  {
+    "case_code": "CASE-2024-004",
+    "title": "[DEMO] Salt Lake Corporate Siphoning Intercept",
+    "description": "Diversion of corporate funds through multiple private accounts in Salt Lake, Kolkata linking regional associates."
+  },
+  {
+    "case_code": "CASE-2024-005",
+    "title": "[DEMO] T Nagar Forged Procurement Scheme",
+    "description": "Procurement fraud utilizing forged Phoenix Traders Association documentation and vehicle transport in Chennai."
+  },
+  {
+    "case_code": "CASE-2024-006",
+    "title": "[DEMO] Powai Cyber Gateway Impersonation",
+    "description": "Investigation into fraudulent payment gateway infrastructure and digital front enterprises operated in Powai, Mumbai."
+  },
+  {
+    "case_code": "CASE-2024-007",
+    "title": "[DEMO] Connaught Place Inventory Clearance Breach",
+    "description": "Unauthorized distribution and consignment clearance by Phoenix Traders associates in New Delhi."
+  },
+  {
+    "case_code": "CASE-2024-008",
+    "title": "[DEMO] Electronic City Corporate Laundering Scheme",
+    "description": "Commercial misrepresentation and shell transaction routing through tech enterprise accounts in Bengaluru."
+  },
+  {
+    "case_code": "CASE-2024-009",
+    "title": "[DEMO] Banjara Hills Joint Venture Diversion",
+    "description": "Financial breach and unauthorized fund diversion during inter-firm joint venture enterprise in Hyderabad."
+  },
+  {
+    "case_code": "CASE-2024-010",
+    "title": "[DEMO] Park Street Syndicate Documentation Theft",
+    "description": "Organized theft of corporate proprietary documentation and transport coordination across Kolkata."
+  }
+]

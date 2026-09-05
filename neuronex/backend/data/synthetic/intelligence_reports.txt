@@ -1,0 +1,211 @@
+--- INTEL REPORT INTEL-2024-001 ---
+REPORT_ID: INTEL-2024-001
+CASE_REF: CASE-2024-001
+CLASSIFICATION: RESTRICTED - DEMO (SYNTHETIC)
+DATE: 2024-03-08
+SUMMARY: Intelligence suggests that Rajesh Kumar Sharma (alias Raju) is the
+coordinator of a financial fraud network operating through ShadowTech Pvt Ltd.
+Associates Priya Mehta and Anil Verma handle fund transfers. Multiple UPI
+accounts and NEFT channels are believed to be in use. Cell tower data from
+Andheri West, Mumbai corroborates. [REDACTED] source confirms link to
+FIR/2020/MH/00055. Recommend surveillance enhancement.
+
+--- INTEL REPORT INTEL-2024-002 ---
+REPORT_ID: INTEL-2024-002
+CASE_REF: CASE-2024-002
+CLASSIFICATION: RESTRICTED - DEMO (SYNTHETIC)
+DATE: 2024-03-25
+SUMMARY: Phoenix Traders Association is suspected of using logistics
+infrastructure to move [REDACTED] across Karol Bagh, New Delhi and Salt Lake,
+Kolkata corridors. Dinesh Patel and Vikram Singh are persons of interest.
+Vehicle TN09GH3456 and MH02IJ7890 flagged in prior surveillance. Mohammed
+Farooq may be the financial intermediary between the two primary networks.
+Cross-reference with SURV-2024-DL-002.
+
+--- INTEL REPORT INTEL-2024-003 ---
+REPORT_ID: INTEL-2024-003
+CASE_REF: CASE-2024-004
+CLASSIFICATION: RESTRICTED - DEMO (SYNTHETIC)
+DATE: 2024-05-30
+SUMMARY: Arjun Malhotra and Fatima Sheikh appear to function as connectors
+between the ShadowTech-linked network and the Phoenix Traders network.
+Large fund movements detected between ACC013456789012 and ACC001234567890.
+Geeta Bose may be facilitating document forgery. Leela Krishnamurthy's
+role remains unclear. Social media intercepts from @arjunm and @fatimas
+suggest coordinated activity. No direct evidence of criminal activity
+confirmed at this stage — further investigation recommended.
+
+--- INTEL REPORT INTEL-2024-EXP-0100 ---
+REPORT_ID: INTEL-2024-EXP-0100
+CASE_REF: CASE-2024-011
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-01
+SUMMARY: Field intelligence intercept indicates Leela Krishnamurthy operating under cover of ShadowTech Pvt Ltd facilitating undocumented movements with Nandita Roy. Multiple communication intercepts corroborate movement across Connaught Place, New Delhi. Cross-reference with case dossier CASE-2024-011.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0101 ---
+REPORT_ID: INTEL-2024-EXP-0101
+CASE_REF: CASE-2024-013
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-02
+SUMMARY: Field intelligence intercept indicates Sameer Joshi operating under cover of Phoenix Traders Association facilitating undocumented movements with Vikram Singh. Multiple communication intercepts corroborate movement across Karol Bagh, New Delhi. Cross-reference with case dossier CASE-2024-013.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0102 ---
+REPORT_ID: INTEL-2024-EXP-0102
+CASE_REF: CASE-2024-015
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-03
+SUMMARY: Field intelligence intercept indicates Nandita Roy operating under cover of Apex Logistics Corp facilitating undocumented movements with Geeta Bose. Multiple communication intercepts corroborate movement across Rohini, New Delhi. Cross-reference with case dossier CASE-2024-015.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0103 ---
+REPORT_ID: INTEL-2024-EXP-0103
+CASE_REF: CASE-2024-017
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-04
+SUMMARY: Field intelligence intercept indicates Vikram Singh operating under cover of BlueHorizon Capital Ltd facilitating undocumented movements with Arjun Malhotra. Multiple communication intercepts corroborate movement across Andheri West, Mumbai. Cross-reference with case dossier CASE-2024-017.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0104 ---
+REPORT_ID: INTEL-2024-EXP-0104
+CASE_REF: CASE-2024-019
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-05
+SUMMARY: Field intelligence intercept indicates Geeta Bose operating under cover of Vanguard Infra Solutions facilitating undocumented movements with Fatima Sheikh. Multiple communication intercepts corroborate movement across Powai, Mumbai. Cross-reference with case dossier CASE-2024-019.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0105 ---
+REPORT_ID: INTEL-2024-EXP-0105
+CASE_REF: CASE-2024-021
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-06
+SUMMARY: Field intelligence intercept indicates Arjun Malhotra operating under cover of Zenith Global Exports facilitating undocumented movements with Girish Banerjee. Multiple communication intercepts corroborate movement across Bandra Kurla Complex, Mumbai. Cross-reference with case dossier CASE-2024-021.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0106 ---
+REPORT_ID: INTEL-2024-EXP-0106
+CASE_REF: CASE-2024-023
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-07
+SUMMARY: Field intelligence intercept indicates Fatima Sheikh operating under cover of Silverline Communications facilitating undocumented movements with Anand Banerjee. Multiple communication intercepts corroborate movement across Koramangala, Bengaluru. Cross-reference with case dossier CASE-2024-023.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0107 ---
+REPORT_ID: INTEL-2024-EXP-0107
+CASE_REF: CASE-2024-025
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-08
+SUMMARY: Field intelligence intercept indicates Girish Banerjee operating under cover of Kaveri Trading Syndicate facilitating undocumented movements with Mohan Singh. Multiple communication intercepts corroborate movement across Electronic City, Bengaluru. Cross-reference with case dossier CASE-2024-025.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0108 ---
+REPORT_ID: INTEL-2024-EXP-0108
+CASE_REF: CASE-2024-027
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-09
+SUMMARY: Field intelligence intercept indicates Anand Banerjee operating under cover of Deccan Security Holdings facilitating undocumented movements with Geeta Kaur. Multiple communication intercepts corroborate movement across Indiranagar, Bengaluru. Cross-reference with case dossier CASE-2024-027.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0109 ---
+REPORT_ID: INTEL-2024-EXP-0109
+CASE_REF: CASE-2024-029
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-10
+SUMMARY: Field intelligence intercept indicates Mohan Singh operating under cover of Maruti Freight Carriers facilitating undocumented movements with Devendra Kumar. Multiple communication intercepts corroborate movement across Salt Lake, Kolkata. Cross-reference with case dossier CASE-2024-029.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0110 ---
+REPORT_ID: INTEL-2024-EXP-0110
+CASE_REF: CASE-2024-031
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-11
+SUMMARY: Field intelligence intercept indicates Geeta Kaur operating under cover of Indus Valley Digital facilitating undocumented movements with Deepak Prasad. Multiple communication intercepts corroborate movement across Park Street, Kolkata. Cross-reference with case dossier CASE-2024-031.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0111 ---
+REPORT_ID: INTEL-2024-EXP-0111
+CASE_REF: CASE-2024-033
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-12
+SUMMARY: Field intelligence intercept indicates Devendra Kumar operating under cover of Falcon Commercial Enterprises facilitating undocumented movements with Rahul Chauhan. Multiple communication intercepts corroborate movement across Bhowanipore, Kolkata. Cross-reference with case dossier CASE-2024-033.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0112 ---
+REPORT_ID: INTEL-2024-EXP-0112
+CASE_REF: CASE-2024-035
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-13
+SUMMARY: Field intelligence intercept indicates Deepak Prasad operating under cover of Eastern Coalitions LLP facilitating undocumented movements with Sandeep Goel. Multiple communication intercepts corroborate movement across T Nagar, Chennai. Cross-reference with case dossier CASE-2024-035.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0113 ---
+REPORT_ID: INTEL-2024-EXP-0113
+CASE_REF: CASE-2024-037
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-14
+SUMMARY: Field intelligence intercept indicates Rahul Chauhan operating under cover of Trident Agro Tech facilitating undocumented movements with Neeta Kumar. Multiple communication intercepts corroborate movement across Anna Nagar, Chennai. Cross-reference with case dossier CASE-2024-037.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0114 ---
+REPORT_ID: INTEL-2024-EXP-0114
+CASE_REF: CASE-2024-039
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-15
+SUMMARY: Field intelligence intercept indicates Sandeep Goel operating under cover of ShadowTech Pvt Ltd facilitating undocumented movements with Rakesh Varma. Multiple communication intercepts corroborate movement across Guindy, Chennai. Cross-reference with case dossier CASE-2024-039.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0115 ---
+REPORT_ID: INTEL-2024-EXP-0115
+CASE_REF: CASE-2024-041
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-16
+SUMMARY: Field intelligence intercept indicates Neeta Kumar operating under cover of Phoenix Traders Association facilitating undocumented movements with Rajesh Goel. Multiple communication intercepts corroborate movement across Banjara Hills, Hyderabad. Cross-reference with case dossier CASE-2024-041.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0116 ---
+REPORT_ID: INTEL-2024-EXP-0116
+CASE_REF: CASE-2024-043
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-17
+SUMMARY: Field intelligence intercept indicates Rakesh Varma operating under cover of Apex Logistics Corp facilitating undocumented movements with Jagdish Iyer. Multiple communication intercepts corroborate movement across Hitec City, Hyderabad. Cross-reference with case dossier CASE-2024-043.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0117 ---
+REPORT_ID: INTEL-2024-EXP-0117
+CASE_REF: CASE-2024-045
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-18
+SUMMARY: Field intelligence intercept indicates Rajesh Goel operating under cover of BlueHorizon Capital Ltd facilitating undocumented movements with Jagdish Patel. Multiple communication intercepts corroborate movement across Secunderabad, Hyderabad. Cross-reference with case dossier CASE-2024-045.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0118 ---
+REPORT_ID: INTEL-2024-EXP-0118
+CASE_REF: CASE-2024-047
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-19
+SUMMARY: Field intelligence intercept indicates Jagdish Iyer operating under cover of Vanguard Infra Solutions facilitating undocumented movements with Karan Verma. Multiple communication intercepts corroborate movement across Navrangpura, Ahmedabad. Cross-reference with case dossier CASE-2024-047.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0119 ---
+REPORT_ID: INTEL-2024-EXP-0119
+CASE_REF: CASE-2024-049
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-20
+SUMMARY: Field intelligence intercept indicates Jagdish Patel operating under cover of Zenith Global Exports facilitating undocumented movements with Neeta Patil. Multiple communication intercepts corroborate movement across SG Highway, Ahmedabad. Cross-reference with case dossier CASE-2024-049.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0120 ---
+REPORT_ID: INTEL-2024-EXP-0120
+CASE_REF: CASE-2024-051
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-21
+SUMMARY: Field intelligence intercept indicates Karan Verma operating under cover of Silverline Communications facilitating undocumented movements with Girish Jha. Multiple communication intercepts corroborate movement across Shivajinagar, Pune. Cross-reference with case dossier CASE-2024-051.
+
+
+--- INTEL REPORT INTEL-2024-EXP-0121 ---
+REPORT_ID: INTEL-2024-EXP-0121
+CASE_REF: CASE-2024-053
+CLASSIFICATION: CONFIDENTIAL - PROTOTYPE (SYNTHETIC)
+DATE: 2024-08-22
+SUMMARY: Field intelligence intercept indicates Neeta Patil operating under cover of Kaveri Trading Syndicate facilitating undocumented movements with Rekha Reddy. Multiple communication intercepts corroborate movement across Hinjawadi, Pune. Cross-reference with case dossier CASE-2024-053.

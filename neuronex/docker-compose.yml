@@ -1,0 +1,76 @@
+services:
+  # ── Neo4j Graph Database ──────────────────────────────────────
+  neo4j:
+    image: neo4j:5.20-community
+    container_name: neuronex_neo4j
+    restart: unless-stopped
+    ports:
+      - "7474:7474"   # Neo4j Browser
+      - "7687:7687"   # Bolt protocol
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-neuronex_demo}
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_dbms_memory_heap_initial__size: 256m
+      NEO4J_dbms_memory_heap_max__size: 512m
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q http://localhost:7474 -O /dev/null || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  # ── FastAPI Backend ───────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: neuronex_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-neuronex_demo}
+      DATABASE_URL: "sqlite+aiosqlite:////app/data/neuronex.db"
+      SPACY_MODEL: en_core_web_sm
+      CORS_ORIGINS: '["http://localhost:3001","http://localhost:3000"]'
+    volumes:
+      - sqlite_data:/app/data
+      - ./backend/data/synthetic:/app/data/synthetic:ro
+      - ./backend/app:/app/app
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  # ── React Frontend (Vite dev server) ─────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: neuronex_frontend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      BACKEND_URL: http://backend:8000
+      VITE_API_URL: http://localhost:8000
+      VITE_PORT: 3001
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/vite.config.js:/app/vite.config.js
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  sqlite_data:

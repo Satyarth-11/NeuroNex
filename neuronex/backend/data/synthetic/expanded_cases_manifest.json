@@ -1,0 +1,252 @@
+[
+  {
+    "case_code": "CASE-2024-011",
+    "title": "[DEMO] Connaught Place Financial Fraud & Shell Diversion",
+    "description": "Investigation in Connaught Place, New Delhi regarding unauthorized transfer of corporate escrow funds into offshore entities and domestic shell accounts."
+  },
+  {
+    "case_code": "CASE-2024-012",
+    "title": "[DEMO] Karol Bagh Logistics Intercept & Consignment Theft",
+    "description": "Investigation in Karol Bagh, New Delhi regarding inter-state freight diversion and hijacked warehouse stock across northern transit corridors."
+  },
+  {
+    "case_code": "CASE-2024-013",
+    "title": "[DEMO] Rohini Procurement Bid Manipulation",
+    "description": "Investigation in Rohini, New Delhi regarding fabricated vendor documentation and collusion in public infrastructure bidding."
+  },
+  {
+    "case_code": "CASE-2024-014",
+    "title": "[DEMO] Andheri West Cyber Extortion & Ransom Intercept",
+    "description": "Investigation in Andheri West, Mumbai regarding distributed extortion network targeting commercial accounting platforms via phishing gateways."
+  },
+  {
+    "case_code": "CASE-2024-015",
+    "title": "[DEMO] Powai Counterfeit Invoicing Network",
+    "description": "Investigation in Powai, Mumbai regarding generation of fake gst tax invoices without genuine movement of underlying goods."
+  },
+  {
+    "case_code": "CASE-2024-016",
+    "title": "[DEMO] Bandra Kurla Complex Unauthorized Mineral Siphoning",
+    "description": "Investigation in Bandra Kurla Complex, Mumbai regarding illegal transit and documentation diversion across regional mining transport links."
+  },
+  {
+    "case_code": "CASE-2024-017",
+    "title": "[DEMO] Koramangala Telecom Tower Hardware Theft",
+    "description": "Investigation in Koramangala, Bengaluru regarding coordinated sabotage and removal of cellular transmission hardware from urban rooftop relays."
+  },
+  {
+    "case_code": "CASE-2024-018",
+    "title": "[DEMO] Electronic City Real Estate Advance Token Fraud",
+    "description": "Investigation in Electronic City, Bengaluru regarding fabricated land development clearance and collection of non-refundable investor advance tokens."
+  },
+  {
+    "case_code": "CASE-2024-019",
+    "title": "[DEMO] Indiranagar Corporate Data Exfiltration",
+    "description": "Investigation in Indiranagar, Bengaluru regarding theft and black-market distribution of proprietary algorithmic trading documentation."
+  },
+  {
+    "case_code": "CASE-2024-020",
+    "title": "[DEMO] Salt Lake Identity Fabrication Syndicate",
+    "description": "Investigation in Salt Lake, Kolkata regarding forged civic documentation and unauthorized sim card activations used for commercial evasion."
+  },
+  {
+    "case_code": "CASE-2024-021",
+    "title": "[DEMO] Park Street Normal Commercial Dispute",
+    "description": "Investigation in Park Street, Kolkata regarding routine commercial inquiry regarding delayed consignment delivery; no criminal conspiracy identified."
+  },
+  {
+    "case_code": "CASE-2024-022",
+    "title": "[DEMO] Bhowanipore Normal Civil Property Record",
+    "description": "Investigation in Bhowanipore, Kolkata regarding civilian boundary clarification and land verification request; unremarkable background record."
+  },
+  {
+    "case_code": "CASE-2024-023",
+    "title": "[DEMO] T Nagar Normal Trade License Clearance",
+    "description": "Investigation in T Nagar, Chennai regarding routine municipal inspection inquiry regarding commercial warehouse zoning compliance."
+  },
+  {
+    "case_code": "CASE-2024-024",
+    "title": "[DEMO] Anna Nagar Financial Fraud & Shell Diversion",
+    "description": "Investigation in Anna Nagar, Chennai regarding unauthorized transfer of corporate escrow funds into offshore entities and domestic shell accounts."
+  },
+  {
+    "case_code": "CASE-2024-025",
+    "title": "[DEMO] Guindy Logistics Intercept & Consignment Theft",
+    "description": "Investigation in Guindy, Chennai regarding inter-state freight diversion and hijacked warehouse stock across northern transit corridors."
+  },
+  {
+    "case_code": "CASE-2024-026",
+    "title": "[DEMO] Banjara Hills Procurement Bid Manipulation",
+    "description": "Investigation in Banjara Hills, Hyderabad regarding fabricated vendor documentation and collusion in public infrastructure bidding."
+  },
+  {
+    "case_code": "CASE-2024-027",
+    "title": "[DEMO] Hitec City Cyber Extortion & Ransom Intercept",
+    "description": "Investigation in Hitec City, Hyderabad regarding distributed extortion network targeting commercial accounting platforms via phishing gateways."
+  },
+  {
+    "case_code": "CASE-2024-028",
+    "title": "[DEMO] Secunderabad Counterfeit Invoicing Network",
+    "description": "Investigation in Secunderabad, Hyderabad regarding generation of fake gst tax invoices without genuine movement of underlying goods."
+  },
+  {
+    "case_code": "CASE-2024-029",
+    "title": "[DEMO] Navrangpura Unauthorized Mineral Siphoning",
+    "description": "Investigation in Navrangpura, Ahmedabad regarding illegal transit and documentation diversion across regional mining transport links."
+  },
+  {
+    "case_code": "CASE-2024-030",
+    "title": "[DEMO] SG Highway Telecom Tower Hardware Theft",
+    "description": "Investigation in SG Highway, Ahmedabad regarding coordinated sabotage and removal of cellular transmission hardware from urban rooftop relays."
+  },
+  {
+    "case_code": "CASE-2024-031",
+    "title": "[DEMO] Shivajinagar Real Estate Advance Token Fraud",
+    "description": "Investigation in Shivajinagar, Pune regarding fabricated land development clearance and collection of non-refundable investor advance tokens."
+  },
+  {
+    "case_code": "CASE-2024-032",
+    "title": "[DEMO] Hinjawadi Corporate Data Exfiltration",
+    "description": "Investigation in Hinjawadi, Pune regarding theft and black-market distribution of proprietary algorithmic trading documentation."
+  },
+  {
+    "case_code": "CASE-2024-033",
+    "title": "[DEMO] Aliganj Identity Fabrication Syndicate",
+    "description": "Investigation in Aliganj, Lucknow regarding forged civic documentation and unauthorized sim card activations used for commercial evasion."
+  },
+  {
+    "case_code": "CASE-2024-034",
+    "title": "[DEMO] Gomti Nagar Normal Commercial Dispute",
+    "description": "Investigation in Gomti Nagar, Lucknow regarding routine commercial inquiry regarding delayed consignment delivery; no criminal conspiracy identified."
+  },
+  {
+    "case_code": "CASE-2024-035",
+    "title": "[DEMO] Civil Lines Normal Civil Property Record",
+    "description": "Investigation in Civil Lines, Jaipur regarding civilian boundary clarification and land verification request; unremarkable background record."
+  },
+  {
+    "case_code": "CASE-2024-036",
+    "title": "[DEMO] Malviya Nagar Normal Trade License Clearance",
+    "description": "Investigation in Malviya Nagar, Jaipur regarding routine municipal inspection inquiry regarding commercial warehouse zoning compliance."
+  },
+  {
+    "case_code": "CASE-2024-037",
+    "title": "[DEMO] Connaught Place Financial Fraud & Shell Diversion",
+    "description": "Investigation in Connaught Place, New Delhi regarding unauthorized transfer of corporate escrow funds into offshore entities and domestic shell accounts."
+  },
+  {
+    "case_code": "CASE-2024-038",
+    "title": "[DEMO] Karol Bagh Logistics Intercept & Consignment Theft",
+    "description": "Investigation in Karol Bagh, New Delhi regarding inter-state freight diversion and hijacked warehouse stock across northern transit corridors."
+  },
+  {
+    "case_code": "CASE-2024-039",
+    "title": "[DEMO] Rohini Procurement Bid Manipulation",
+    "description": "Investigation in Rohini, New Delhi regarding fabricated vendor documentation and collusion in public infrastructure bidding."
+  },
+  {
+    "case_code": "CASE-2024-040",
+    "title": "[DEMO] Andheri West Cyber Extortion & Ransom Intercept",
+    "description": "Investigation in Andheri West, Mumbai regarding distributed extortion network targeting commercial accounting platforms via phishing gateways."
+  },
+  {
+    "case_code": "CASE-2024-041",
+    "title": "[DEMO] Powai Counterfeit Invoicing Network",
+    "description": "Investigation in Powai, Mumbai regarding generation of fake gst tax invoices without genuine movement of underlying goods."
+  },
+  {
+    "case_code": "CASE-2024-042",
+    "title": "[DEMO] Bandra Kurla Complex Unauthorized Mineral Siphoning",
+    "description": "Investigation in Bandra Kurla Complex, Mumbai regarding illegal transit and documentation diversion across regional mining transport links."
+  },
+  {
+    "case_code": "CASE-2024-043",
+    "title": "[DEMO] Koramangala Telecom Tower Hardware Theft",
+    "description": "Investigation in Koramangala, Bengaluru regarding coordinated sabotage and removal of cellular transmission hardware from urban rooftop relays."
+  },
+  {
+    "case_code": "CASE-2024-044",
+    "title": "[DEMO] Electronic City Real Estate Advance Token Fraud",
+    "description": "Investigation in Electronic City, Bengaluru regarding fabricated land development clearance and collection of non-refundable investor advance tokens."
+  },
+  {
+    "case_code": "CASE-2024-045",
+    "title": "[DEMO] Indiranagar Corporate Data Exfiltration",
+    "description": "Investigation in Indiranagar, Bengaluru regarding theft and black-market distribution of proprietary algorithmic trading documentation."
+  },
+  {
+    "case_code": "CASE-2024-046",
+    "title": "[DEMO] Salt Lake Identity Fabrication Syndicate",
+    "description": "Investigation in Salt Lake, Kolkata regarding forged civic documentation and unauthorized sim card activations used for commercial evasion."
+  },
+  {
+    "case_code": "CASE-2024-047",
+    "title": "[DEMO] Park Street Normal Commercial Dispute",
+    "description": "Investigation in Park Street, Kolkata regarding routine commercial inquiry regarding delayed consignment delivery; no criminal conspiracy identified."
+  },
+  {
+    "case_code": "CASE-2024-048",
+    "title": "[DEMO] Bhowanipore Normal Civil Property Record",
+    "description": "Investigation in Bhowanipore, Kolkata regarding civilian boundary clarification and land verification request; unremarkable background record."
+  },
+  {
+    "case_code": "CASE-2024-049",
+    "title": "[DEMO] T Nagar Normal Trade License Clearance",
+    "description": "Investigation in T Nagar, Chennai regarding routine municipal inspection inquiry regarding commercial warehouse zoning compliance."
+  },
+  {
+    "case_code": "CASE-2024-050",
+    "title": "[DEMO] Anna Nagar Financial Fraud & Shell Diversion",
+    "description": "Investigation in Anna Nagar, Chennai regarding unauthorized transfer of corporate escrow funds into offshore entities and domestic shell accounts."
+  },
+  {
+    "case_code": "CASE-2024-051",
+    "title": "[DEMO] Guindy Logistics Intercept & Consignment Theft",
+    "description": "Investigation in Guindy, Chennai regarding inter-state freight diversion and hijacked warehouse stock across northern transit corridors."
+  },
+  {
+    "case_code": "CASE-2024-052",
+    "title": "[DEMO] Banjara Hills Procurement Bid Manipulation",
+    "description": "Investigation in Banjara Hills, Hyderabad regarding fabricated vendor documentation and collusion in public infrastructure bidding."
+  },
+  {
+    "case_code": "CASE-2024-053",
+    "title": "[DEMO] Hitec City Cyber Extortion & Ransom Intercept",
+    "description": "Investigation in Hitec City, Hyderabad regarding distributed extortion network targeting commercial accounting platforms via phishing gateways."
+  },
+  {
+    "case_code": "CASE-2024-054",
+    "title": "[DEMO] Secunderabad Counterfeit Invoicing Network",
+    "description": "Investigation in Secunderabad, Hyderabad regarding generation of fake gst tax invoices without genuine movement of underlying goods."
+  },
+  {
+    "case_code": "CASE-2024-055",
+    "title": "[DEMO] Navrangpura Unauthorized Mineral Siphoning",
+    "description": "Investigation in Navrangpura, Ahmedabad regarding illegal transit and documentation diversion across regional mining transport links."
+  },
+  {
+    "case_code": "CASE-2024-056",
+    "title": "[DEMO] SG Highway Telecom Tower Hardware Theft",
+    "description": "Investigation in SG Highway, Ahmedabad regarding coordinated sabotage and removal of cellular transmission hardware from urban rooftop relays."
+  },
+  {
+    "case_code": "CASE-2024-057",
+    "title": "[DEMO] Shivajinagar Real Estate Advance Token Fraud",
+    "description": "Investigation in Shivajinagar, Pune regarding fabricated land development clearance and collection of non-refundable investor advance tokens."
+  },
+  {
+    "case_code": "CASE-2024-058",
+    "title": "[DEMO] Hinjawadi Corporate Data Exfiltration",
+    "description": "Investigation in Hinjawadi, Pune regarding theft and black-market distribution of proprietary algorithmic trading documentation."
+  },
+  {
+    "case_code": "CASE-2024-059",
+    "title": "[DEMO] Aliganj Identity Fabrication Syndicate",
+    "description": "Investigation in Aliganj, Lucknow regarding forged civic documentation and unauthorized sim card activations used for commercial evasion."
+  },
+  {
+    "case_code": "CASE-2024-060",
+    "title": "[DEMO] Gomti Nagar Normal Commercial Dispute",
+    "description": "Investigation in Gomti Nagar, Lucknow regarding routine commercial inquiry regarding delayed consignment delivery; no criminal conspiracy identified."
+  }
+]
